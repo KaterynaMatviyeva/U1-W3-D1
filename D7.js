@@ -55,6 +55,11 @@ console.log(sumOfNum(1, 2, 3, 4, 5));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let numbers = [2, 3, 5, 6];
+
+let sum = numbers.reduce((acc, curr) => acc + curr, 0);
+
+console.log(sum);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -211,22 +216,57 @@ oldestFilm();
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+let numberOfFilms = (array) => {
+  let films = array.length;
+
+  return films;
+};
+console.log(numberOfFilms(movies));
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+let onlyTitles = (array) => {
+  let films = array.map((array) => array.Title);
+  return films;
+};
+console.log(onlyTitles(movies));
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+let thisMillenial = (array) => {
+  let millenial = array.filter((array) => array.Year > 1999);
+  return millenial;
+};
+console.log(thisMillenial(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+let sumOfYears = (array) => {
+  let sum = array.reduce((acc, array) => acc + parseInt(array.Year), 0);
+  return sum;
+};
+console.log(sumOfYears(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+let findFilmsId = (array, id) => {
+  let findIt = array.find((array) => id === array.imdbID);
+  return findIt;
+};
+console.log(findFilmsId(movies, "tt4154796"));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+let findDex = (array, anno) => {
+  let findIt = array.findIndex((array) => anno === array.Year);
+  return findIt;
+};
+console.log(findDex(movies, "2019"));
