@@ -12,6 +12,7 @@ function concatStringhe(stringa1, stringa2) {
 }
 
 concatStringhe("ciao", "Kateryna");
+
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
@@ -20,9 +21,10 @@ function getRandom() {
   for (let i = 0; i < 10; i++) {
     numeriCasuali.push(Math.floor(Math.random(i) * 101));
   }
+  return numeriCasuali;
 }
-getRandom(numeriCasuali);
-console.log(numeriCasuali);
+
+console.log(getRandom());
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
